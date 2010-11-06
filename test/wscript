@@ -1,0 +1,8 @@
+def build(bld):
+    bld(features  = 'cxx cprogram',
+        source    = ['test_windowed.cpp'],
+        target    = 'test_windowed',
+        includes  = ['.', '..'],
+        defines   = ['BOOST_TEST_DYN_LINK'],
+        uselib    = 'BOOST_UNIT_TEST_FRAMEWORK',
+    )
